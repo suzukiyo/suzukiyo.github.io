@@ -40,6 +40,14 @@
 		scroller($(this).attr('id')+'-area');
 	});
 
+	$("#up").hide();
+	$(window).on("scroll", function() {
+		if ($(this).scrollTop() > 100) {
+            $('#up').fadeIn('slow');
+        } else {
+            $('#up').fadeOut('slow');
+        }
+	});
 	$('#up').click(function() {
         $('body,html').animate({scrollTop:0}, 500);
         return false;
@@ -54,7 +62,7 @@
 	}
 
 	function scroller(targetname) {
-		$("html,body").animate({scrollTop:$('#'+targetname).offset().top});
+		$("html,body").animate({scrollTop:$('#'+targetname).offset().top-10});
 	}
 
 	
