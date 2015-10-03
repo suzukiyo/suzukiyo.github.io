@@ -2,16 +2,24 @@
 
 	// sample css settings
 	$('body').css('background-color', '#286090');
+	$('header').css('margin-bottom', '100px');
+	$('#menu-btn').css('position','fixed');
 	$('#title').css('font-size', '70px');
 	$('#subtitle').css('font-size', '30px');
 	$('#menu').css({
 		'opacity':'.5',
-		'margin':'10px 0 10px 0'
+		'margin':'10px 0 10px 0',
+		'position':'fixed'
 	});
 	$('#up').css({
 		'position':'fixed',
 		'right':'5%',
 		'bottom':0
+	});
+	$('.btn').css({
+		'width':'33%',
+		'height':'120px',
+		'font-size':'40px'
 	});
 
 	// This event is menu icon click.
