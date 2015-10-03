@@ -4,7 +4,10 @@
 	$('body').css('background-color', '#286090');
 	$('#title').css('font-size', '70px');
 	$('#subtitle').css('font-size', '30px');
-	$('#menu').css('opacity', '.5');
+	$('#menu').css({
+		'opacity':'.5',
+		'margin':'10px 0 10px 0'
+	});
 	$('#up').css({
 		'position':'fixed',
 		'right':'5%',
@@ -13,15 +16,14 @@
 
 	// This event is menu icon click.
 	$('#menu-btn').click(function(){
-		if ($('.close', this).css('display') === 'block') {
+		if ($('.close-btn', this).css('display') === 'block') {
 			closemenu();
 		} else {
 			$('#menu').css({
-				'display':'block',
-				'position':'absolute'
+				'display':'block'
 			});
-			$('.open', this).css('display', 'none');
-			$('.close', this).css('display', 'block');
+			$('.open-btn', this).css('display', 'none');
+			$('.close-btn', this).css('display', 'block');
 		}
 	});
 
@@ -37,11 +39,10 @@
 
 	function closemenu(){
 		$('#menu').css({
-				'display':'none',
-				'position':'absolute'
+				'display':'none'
 			});
-		$('.open', '#menu-btn').css('display', 'block');
-		$('.close', '#menu-btn').css('display', 'none');
+		$('.open-btn', '#menu-btn').css('display', 'block');
+		$('.close-btn', '#menu-btn').css('display', 'none');
 	}
 
 	function scroller(targetname) {
