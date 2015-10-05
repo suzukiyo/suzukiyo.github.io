@@ -1,20 +1,24 @@
 (function($){
 
 	// sample css settings
-	$('body').css('background-color', '#286090');
+	$('body').css('background-color', 'white');
 	$('header').css('margin-bottom', '100px');
-	$('#menu-btn').css('position','fixed');
+	$('#menu-btn').css({
+		'position':'fixed',
+		'cursor':'pointer'
+	});
 	$('#title').css('font-size', '70px');
 	$('#subtitle').css('font-size', '30px');
 	$('#menu').css({
-		'opacity':'.5',
+		'opacity':'.7',
 		'margin':'10px 0 10px 0',
 		'position':'fixed'
 	});
 	$('#up').css({
 		'position':'fixed',
 		'right':'5%',
-		'bottom':0
+		'bottom':0,
+		'cursor':'pointer'
 	});
 	$('.btn').css({
 		'width':'33%',
@@ -22,8 +26,10 @@
 		'font-size':'40px'
 	});
 	$('article').css({
-		'margin':'50px 0 auto',
-		'font-size':'20px'
+		'font-size':'20px',
+	});
+	$('img').css({
+		'margin':'30px auto',
 	});
 
 	// This event is menu icon click.
@@ -31,9 +37,7 @@
 		if ($('.close-btn', this).css('display') === 'block') {
 			closemenu();
 		} else {
-			$('#menu').css({
-				'display':'block'
-			});
+			$('#menu').fadeIn('slow');
 			$('.open-btn', this).css('display', 'none');
 			$('.close-btn', this).css('display', 'block');
 		}
@@ -57,10 +61,9 @@
         return false;
      });
 
+	// menu close function
 	function closemenu(){
-		$('#menu').css({
-				'display':'none'
-			});
+		$('#menu').fadeOut('slow');
 		$('.open-btn', '#menu-btn').css('display', 'block');
 		$('.close-btn', '#menu-btn').css('display', 'none');
 	}
