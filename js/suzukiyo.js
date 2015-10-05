@@ -21,6 +21,10 @@
 		'height':'120px',
 		'font-size':'40px'
 	});
+	$('article').css({
+		'margin':'50px 0 auto',
+		'font-size':'20px'
+	});
 
 	// This event is menu icon click.
 	$('#menu-btn').click(function(){
