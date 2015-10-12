@@ -13,10 +13,10 @@
     <![endif]-->
 </head>
 <body>
-    <header>
+    <header class="container">
         <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 col-md-offset-11">
+            <div class="col-xs-9"></div>
+            <div class="col-xs-1">
                 <div id="menu-btn">
                     <div class="open-btn" style="font-size:40px;"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></div>
                     <div class="close-btn" style="font-size:40px;display:none"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></div>
@@ -25,7 +25,9 @@
         </div>
     </header>
     <section id="home-area" class="text-center">
-        <h1 id="title">suzukiyo</h1>
+        <h1 id="title">
+            <span>suzukiyo</span>
+        </h1>
         <article class="com">
             <h2 id="subtitle">Here is ...</h2>
             a self-introduction site of Suzukiyo.
@@ -74,20 +76,47 @@
         <div id="up" style="font-size:40px"><span class="glyphicon glyphicon-hand-up"></span></div>
     </footer>
     <nav id="menu">
-        <div class="container">
-            <table class="table">
-                <tr>
-                    <td><button type="button" id="home" class="btn btn-primary"><h3>HOME</h3></button></td>
-                    <td><button type="button" id="about" class="btn btn-primary"><h3>ABOUT ME</h3></button></td>
-                    <td><button type="button" id="work" class="btn btn-primary"><h3>WORK</h3></button></td>
-                </tr>
-                <tr>
-                    <td><button type="button" id="research" class="btn btn-primary"><h3>RESEARCH</h3></button></td>
-                    <td><button type="button" id="improve" class="btn btn-primary"><h3>IMPROVE</h3></button></td>
-                    <td><button type="button" id="contact" class="btn btn-primary"><h3>CONTACT</h3></button></td>
-                </tr>
-            </table>
-        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div>
+                                <button type="button" id="home" class="btn btn-primary"><h3>HOME</h3></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <button type="button" id="research" class="btn btn-primary"><h3>RESEARCH</h3></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div>
+                                <button type="button" id="about" class="btn btn-primary"><h3>ABOUT ME</h3></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <button type="button" id="improve" class="btn btn-primary"><h3>IMPROVE</h3></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div>
+                                <button type="button" id="work" class="btn btn-primary"><h3>WORK</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <button type="button" id="contact" class="btn btn-primary"><h3>CONTACT</h3></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
