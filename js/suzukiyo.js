@@ -11,6 +11,7 @@
 					'width': $(document).width(),
 					'height': $(document).height(),
 					'opacity': '.8',
+					'display': 'none',
 					'top': 0,
 					'left': 0,
 					'position': 'absolute',
