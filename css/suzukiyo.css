@@ -1,2 +1,78 @@
-body{ margin: 0; padding: 0; background: #fafafa;
-  font-family: YuGothic, 'Yu Gothic', 游ゴシック体, 游ゴシック, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', Osaka, 'MS PGothic', Arial, Helvetica, Verdana, sans-serif;}
+body{ 
+  margin: 0; padding: 0; background: #fff;
+  font-family: YuGothic, 'Yu Gothic', 游ゴシック体, 游ゴシック, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', Osaka, 'MS PGothic', Arial, Helvetica, Verdana, sans-serif;
+}
+
+header{
+  margin-bottom: 5rem;
+}
+
+#home-area{
+  background-color: #ccc;
+}
+
+#menu-btn{
+  position: fixed;
+  cursor: pointer;
+}
+
+#title{
+  font-size: 30rem;
+}
+
+#subtitle{
+  font-size: 3rem;
+}
+
+#menu{
+  background-color: #D4D8D1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  bottom: 0;
+  position: fixed;
+}
+
+#up{
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.btn{
+  width: 100%;
+  height: 200px;
+}
+
+article{
+  font-size: 2rem;
+}
+
+img{
+  margin: 30px auto;
+}
+
+section#about-area{
+  background-color: white;
+}
+section#work-area{
+  background-color:cornflowerblue;
+}
+section#research-area{
+  background-color:darkseagreen;
+}
+section#improve-area{
+  background-color:goldenrod;
+}
+section#contact-area{
+  background-color:hotpink;
+}
+.com{
+  height: 700px;
+}
+h1{
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
