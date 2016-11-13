@@ -20,9 +20,6 @@ header{
 #title{
   font-size: 15em;
 }
-#title span{
-  padding: 0 100px 0 100px;
-}
 
 #subtitle{
   font-size: 3rem;
@@ -74,12 +71,36 @@ section#improve-area{
 section#contact-area{
   background-color:hotpink;
 }
-.com{
-  height: 700px;
-}
 h1{
   font-size: 5rem;
   padding-top: 3rem;
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.image{
+  width: 250px;
+  height: 250px;
+}
+
+@media screen and ( max-width:450px ) {
+  #title{
+    font-size: 3em;
+  }
+  #subtitle{
+    font-size: 1.5rem;
+  }
+  article{
+    font-size: 1.2rem;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  .image{
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+

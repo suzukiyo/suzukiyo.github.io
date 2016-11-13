@@ -1,5 +1,7 @@
 (function($){
 
+	$(".com").css('height', window.parent.screen.height);
+
 	// This event is menu icon click.
 	$('#menu-btn').click(function(e){
 		if ($('.close-btn', this).css('display') === 'block') {
