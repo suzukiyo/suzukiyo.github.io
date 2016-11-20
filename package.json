@@ -1,5 +1,33 @@
 {
-  "devDependencies": {
-    "jquery": "1.12.0"
+  "name": "suzukiyo.github.io",
+  "homepage": "https://github.com/suzukiyo/",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/suzukiyo/suzukiyo.github.io/blob/master/LICENSE.txt"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "configs": {
+    "directories": {
+      "src": "src",
+      "dist": "dist"
+    }
+  },
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.8.8",
+    "gulp-jscs": "^4.0.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "jquery": "1.12.0",
+    "normalize.css": "^5.0.0",
+    "run-sequence": "^1.2.2"
   }
 }
