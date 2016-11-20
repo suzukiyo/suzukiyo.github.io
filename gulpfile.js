@@ -31,7 +31,7 @@ gulp.task('copy', [
 gulp.task('copy:index.html', function () {
     return gulp.src(dirs.src + '/index.html')
                .pipe(plugins.replace(/{{JQUERY_VERSION}}/g, pkg.dependencies.jquery))
-               .pipe(gulp.dest(dirs.dist));
+               .pipe(gulp.dest("./"));
 });
 
 gulp.task('copy:jquery', function () {
