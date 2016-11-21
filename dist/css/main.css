@@ -2,21 +2,21 @@
 
 body{ 
   margin: 0; padding: 0; background: #fff;
-  font-family: YuGothic, 'Yu Gothic', 游ゴシック体, 游ゴシック, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', Osaka, 'MS PGothic', Arial, Helvetica, Verdana, sans-serif;
-}
-
-header{
-  margin-bottom: 5rem;
+  font-family: sans-serif;
 }
 
 #home-area{
-  background-color: #ccc;
+  background-image: url("../img/background/borudaringukabe.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white;
 }
 
 #menu-btn{
   position: fixed;
   cursor: pointer;
   right: 3%;
+  color: white;
 }
 
 #title{
@@ -59,16 +59,16 @@ img{
 }
 
 section#about-area{
-  background-color: white;
+  background-color: antiquewhite;
 }
 section#work-area{
-  background-color:cornflowerblue;
+  background-color: cornflowerblue;
 }
 section#research-area{
-  background-color:darkseagreen;
+  background-color: darkseagreen;
 }
 section#improve-area{
-  background-color:goldenrod;
+  background-color: goldenrod;
 }
 section#contact-area{
   background-color:hotpink;
@@ -85,7 +85,23 @@ h1{
   height: 250px;
 }
 
+.btn-primary {
+  background-color: black;
+  border-color: antiquewhite;
+}
+.btn-primary:hover {
+  color: black;
+  background-color: white;
+  border-color: antiquewhite;
+}
+
 @media screen and ( max-width:450px ) {
+  #home-area{
+    background-image: url("../img/background/borudaringukabe.jpg");
+    background-repeat: no-repeat;
+    background-size: 450px;
+    color: white;
+  }
   #title{
     font-size: 3em;
   }

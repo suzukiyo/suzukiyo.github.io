@@ -8,13 +8,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="dist/css/normalize.css" rel="stylesheet">
     <link href="dist/css/main.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
-    <header class="container">
+    <header data-model="Header" class="container">
         <div class="row">
             <div class="col-xs-9"></div>
             <div class="col-xs-1">
@@ -25,7 +21,7 @@
             </div>
         </div>
     </header>
-    <section id="home-area" class="text-center">
+    <section data-model="Home" id="home-area" class="text-center">
         <h1 id="title">
             <span>suzukiyo</span>
         </h1>
@@ -34,7 +30,7 @@
             a self-introduction site of Suzukiyo.
         </article>
     </section>
-    <section id="about-area" class="text-center">
+    <section data-model="About" id="about-area" class="text-center">
         <h1>ABOUT ME</h1>
         <article class="com">
             <div><img class="image" src="http://suzukiyo.github.io/dist/img/aboutme.png" slt="aboutme" /></div>
@@ -42,28 +38,28 @@
             <div>サーバサイドエンジニアですが、フロントサイドもお勉強中。</div>
             <div>東京在住。</div>
             <div>趣味、ボルダリング。</div>
-            <div>水道橋のスポドリで登っています。</div>
+            <div>水道橋、荻窪、吉祥寺で登っています。</div>
         </article>
     </section>
-    <section id="work-area" class="text-center">
+    <section data-model="Work" id="work-area" class="text-center">
         <h1>WORK</h1>
         <article class="com">
             <div>comming soon...</div>
         </article>
     </section>
-    <section id="research-area" class="text-center">
+    <section data-model="Research" id="research-area" class="text-center">
         <h1 >RESEARCH</h1>
         <article class="com">
             <div>comming soon...</div>
         </article>
     </section>
-    <section id="improve-area" class="text-center">
+    <section data-model="Improve" id="improve-area" class="text-center">
         <h1>IMPROVE</h1>
         <article class="com">
             <div>comming soon...</div>
         </article>
     </section>
-    <section id="contact-area" class="text-center">
+    <section data-model="Contact" id="contact-area" class="text-center">
         <h1>CONTACT</h1>
         <article class="com">
             <div>
@@ -73,10 +69,10 @@
             </div>
         </article>
     </section>
-    <footer>
+    <footer data-model="Footer">
         <div id="up" style="font-size:40px"><span class="glyphicon glyphicon-hand-up"></span></div>
     </footer>
-    <nav id="menu">
+    <nav data-model="Menu" id="menu">
         <div class="container-fluid">
             <div class="row">
                 <div class="row">

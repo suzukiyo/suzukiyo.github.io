@@ -13,6 +13,9 @@
       "dist": "dist"
     }
   },
+  "constant": {
+    "domain" : "http://suzukiyo.github.io"
+  },
   "dependencies": {
     "del": "^2.2.2",
     "gulp": "^3.8.11",
