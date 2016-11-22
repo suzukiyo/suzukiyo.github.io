@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 var concat = require("gulp-concat");
 var plumber = require("gulp-plumber");
 var rename = require('gulp-rename');
+var sass = require('gulp-sass');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 
@@ -23,8 +24,6 @@ gulp.task('copy', [
     'copy:index.html',
     'copy:jquery',
     'copy:license',
-    'copy:main.css',
-    'copy:misc',
     'copy:normalize'
 ]);
 
@@ -38,7 +37,7 @@ gulp.task('copy:index.html', function () {
 gulp.task('copy:jquery', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
         .pipe(plugins.rename('jquery-' + pkg.dependencies.jquery + '.min.js'))
-        .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+        .pipe(gulp.dest(dirs.src + '/js/vendor'));
 });
 
 gulp.task('copy:license', function () {
@@ -46,65 +45,50 @@ gulp.task('copy:license', function () {
                .pipe(gulp.dest(dirs.dist));
 });
 
-gulp.task('copy:main.css', function () {
-
-    var banner = '/*! ' + pkg.name + ' v' + pkg.version +
-                    ' | ' + pkg.license.type + ' License' +
-                    ' | ' + pkg.homepage + ' */\n\n';
-
-    return gulp.src(dirs.src + '/css/main.css')
-               .pipe(plugins.header(banner))
-               .pipe(plugins.autoprefixer({
-                   browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
-                   cascade: false
-               }))
-               .pipe(gulp.dest(dirs.dist + '/css'));
-});
-
-gulp.task('copy:misc', function () {
-    return gulp.src([
-
-        // Copy all files
-        dirs.src + '/**/*',
-
-        // Exclude the following files
-        // (other tasks will handle the copying of these files)
-        '!' + dirs.src + '/css/main.css',
-        '!' + dirs.src + '/index.html'
-
-    ], {
-
-        // Include hidden files by default
-        dot: true
-
-    }).pipe(gulp.dest(dirs.dist));
-});
-
 gulp.task('copy:normalize', function () {
     return gulp.src('node_modules/normalize.css/normalize.css')
                .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
-gulp.task('js.concat', function() {
-        return gulp.src([
-            dirs.dist+'/js/vendor/*.js',
-            dirs.dist+'/js/controller/*.js',
-            dirs.dist+'/js/model/*.js',
-            dirs.dist+'/js/model/contents/*.js',
-            dirs.dist+'/js/main.js'
-        ])
+gulp.task('img', function(){
+    gulp.src(dirs.src+'/img/*.*')
         .pipe(plumber())
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest(dirs.dist+'/js'));
+        .pipe(gulp.dest(dirs.dist+'/img'));
 });
-gulp.task('js.uglify', function(){
-    gulp.src(dirs.dist + '/js/main.js')
+
+gulp.task('js', function(){
+    gulp.src([
+        dirs.src+'/js/vendor/*.js',
+        dirs.src+'/js/controller/*.js',
+        dirs.src+'/js/model/*.js',
+        dirs.src+'/js/model/contents/*.js',
+        dirs.src+'/js/main.js'
+    ])
         .pipe(plumber())
         .pipe(uglify({preserveComments: 'some'}))
-        .pipe(rename('main.min.js'))
+        .pipe(concat('main.js'))
+        .pipe(rename({extname: '.min.js'}))
         .pipe(gulp.dest(dirs.dist+'/js'));
 });
 
+gulp.task('css', function(){
+
+    var banner = '/*! ' + pkg.name + ' v' + pkg.version +
+        ' | ' + pkg.license.type + ' License' +
+        ' | ' + pkg.homepage + ' */\n\n';
+
+    gulp.src(dirs.src + '/scss/*.scss')
+        .pipe(plumber())
+        .pipe(plugins.header(banner))
+        .pipe(plugins.autoprefixer({
+            browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
+            cascade: false
+        }))
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(concat('main.css'))
+        .pipe(rename({extname: '.min.css'}))
+        .pipe(gulp.dest(dirs.dist+'/css'));
+});
 
 // ---------------------------------------------------------------------
 // | Main tasks                                                        |
@@ -114,8 +98,9 @@ gulp.task('build', function (done) {
     runSequence(
         'clean',
         'copy',
-        'js.concat',
-        'js.uglify',
+        'img',
+        'js',
+        'css',
     done);
 });
 

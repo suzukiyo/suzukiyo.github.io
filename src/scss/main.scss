@@ -1,8 +1,5 @@
-/*! suzukiyo.github.io v1.0.0 | MIT License | https://github.com/suzukiyo/ */
-
-body{ 
+body{
   margin: 0; padding: 0; background: #fff;
-  font-family: sans-serif;
 }
 
 #home-area{
@@ -21,6 +18,7 @@ body{
 
 #title{
   font-size: 15em;
+  color: #fff;
 }
 
 #subtitle{
@@ -51,7 +49,7 @@ body{
 }
 
 article{
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 img{
@@ -62,19 +60,20 @@ section#about-area{
   background-color: antiquewhite;
 }
 section#work-area{
-  background-color: cornflowerblue;
+  background-color: aliceblue;
 }
 section#research-area{
-  background-color: darkseagreen;
+  background-color: lightgreen;
 }
 section#improve-area{
-  background-color: goldenrod;
+  background-color: #ffff99;
 }
 section#contact-area{
-  background-color:hotpink;
+  background-color: #212121 !important
 }
 h1{
-  font-size: 5rem;
+  font-size: 2.5rem;
+  color: #a5bf23;
   padding-top: 3rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -93,6 +92,21 @@ h1{
   color: black;
   background-color: white;
   border-color: antiquewhite;
+}
+
+/* work */
+.work_title {
+  color: darkblue;
+}
+
+/* research */
+.research_title {
+  color: darkgreen;
+}
+
+/* improve */
+.improve_title {
+  color: darkorange;
 }
 
 @media screen and ( max-width:450px ) {
@@ -118,7 +132,4 @@ h1{
     width: 100px;
     height: 100px;
   }
-
 }
-
-
