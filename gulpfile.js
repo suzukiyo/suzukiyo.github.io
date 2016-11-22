@@ -51,7 +51,7 @@ gulp.task('copy:normalize', function () {
 });
 
 gulp.task('img', function(){
-    gulp.src(dirs.src+'/img/*.*')
+    gulp.src(dirs.src+'/img/**/*.*')
         .pipe(plumber())
         .pipe(gulp.dest(dirs.dist+'/img'));
 });
