@@ -37,6 +37,8 @@ body{
   right: 3%;
   bottom: 5%;
   cursor: pointer;
+  animation: vertical_9632 2.44s ease infinite;
+  transform-origin: 50% 50%;
 }
 
 .btn{
@@ -132,4 +134,15 @@ h1{
     width: 100px;
     height: 100px;
   }
+}
+
+@keyframes vertical_9632 {
+  0% { transform:translate(0,-3px) }
+  3.27869% { transform:translate(0,3px) }
+  6.55738% { transform:translate(0,-3px) }
+  9.83606% { transform:translate(0,3px) }
+  13.11475% { transform:translate(0,-3px) }
+  16.39344% { transform:translate(0,3px) }
+  18.03279% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
 }
