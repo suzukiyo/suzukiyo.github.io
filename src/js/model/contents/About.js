@@ -3,8 +3,5 @@ var About = function($) {
         'model' : document.querySelectorAll('[data-model="About"]')
     }
     $com = $(SELECTORs.model).find('.com');
-    $com.css('height', window.parent.screen.height);
-    $(window).resize(function(){
-        $com.css('height', window.parent.screen.height);
-    });
+    $com.css('height', $(window).height() + 'px');
 }

@@ -2,9 +2,6 @@ var Home = function($) {
     var SELECTORs = {
         'model' : document.querySelectorAll('[data-model="Home"]')
     }
-    $com = $(SELECTORs.model).find('.com');
-    $com.css('height', window.parent.screen.height);
-    $(window).resize(function(){
-        $com.css('height', window.parent.screen.height);
-    });
+    $com = $(SELECTORs.model);
+    $com.css('height', $(window).height() + 'px');
 }
