@@ -1,5 +1,7 @@
 $color-word-base: #000;
 $color-improve-base: darkorange;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
 
 body {
   width: 100%;
@@ -149,7 +151,12 @@ article p {
 
 #home-area{
   max-width: 100%;
-  background-image: url("../img/background/borudaringukabe.jpg");
+  background-image: url("../assets/img/background/borudaringukabe.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #ffffff;
   height:auto;
   color: white;
 }
