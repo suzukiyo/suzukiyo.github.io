@@ -15,3 +15,4 @@ http://suzukiyo.github.io/
 # style
 
 - sass
+- bootstrap
