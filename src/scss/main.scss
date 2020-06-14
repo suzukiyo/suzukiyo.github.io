@@ -113,19 +113,19 @@ article p {
   padding: 0;
 }
 
-.main_header.popup .box_gnavi {
+#main_header.popup .box_gnavi {
   display: block;
   margin: 40px;
 }
 
-.main_header.popup .gnavis {
+#main_header.popup .gnavis {
   float: none;
   width: 100%;
   left: 0;
 }
 
 
-.main_header.popup .gnavis .gnavi_item {
+#main_header.popup .gnavis .gnavi_item {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -139,7 +139,7 @@ article p {
   background-size: 8px 14px;
 }
 
-.main_header.popup .gnavis .gnavi_item a {
+#main_header.popup .gnavis .gnavi_item a {
   display: block;
   color: #ffffff;
   font-size: 2.5rem;

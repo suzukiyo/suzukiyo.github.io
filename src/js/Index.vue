@@ -1,15 +1,11 @@
 <template>
     <div>
-        <header class="main_header">
-            <header class="main_header">
-                <div class="header_inner">
-                    <div class="header_logo">
-                        <router-link :to="{ name: 'top'}" class="logo">suzukiyo.github.io</router-link>
-                        <span id="gnavi-menu"  class="menu_icon glyphicon glyphicon-align-justify" aria-hidden="true"></span>
-                    </div>
-                </div>
-            </header>
+        <header id="main_header" class="main_header">
             <div class="header_inner">
+                <div class="header_logo">
+                    <router-link :to="{ name: 'top'}" class="logo">suzukiyo.github.io</router-link>
+                    <span id="gnavi-menu" class="menu_icon glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                </div>
                 <nav class="box_gnavi">
                     <ul class="gnavis">
                         <li class="gnavi_item"><router-link :to="{ name: 'top'}">Top</router-link></li>
@@ -35,27 +31,26 @@
     import Research from './Research.vue'
     import Improve from './Improve.vue'
     import Contact from './Contact.vue'
-    import $ from 'jquery'
 
     export default {
         mounted: function() {
-            const SELECTORs = {
-                "btn" : ".gnavi_item > a"
+            const openCLoseMenu = (header) => {
+                if(header.classList.contains("popup")) {
+                    return header.classList.remove("popup")
+                } else {
+                    return header.classList.add("popup")
+                }
             }
 
-            $('#gnavi-menu').click(function(e){
-                if($('.main_header').hasClass('popup')) {
-                    $('.main_header').removeClass('popup');
-                    $('body').css('position', 'static');
-                    return;
-                }
-                $('.main_header').addClass('popup');
-                $('body').css('position', 'fixed');
-            });
+            const clickMenu = (header) => {
+                header.classList.remove("popup")
+            }
 
-            $(SELECTORs.btn).on('click', function(){
-                $('#gnavi-menu').click();
-            });
+            const header = document.querySelector("#main_header");
+            document.querySelector("#gnavi-menu")
+                .onclick = () => openCLoseMenu(header);
+            document.querySelectorAll(".gnavi_item > a")
+                .forEach(item => item.onclick = () => clickMenu(header));
         }
     }
 
