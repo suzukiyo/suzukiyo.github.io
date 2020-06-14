@@ -22,10 +22,6 @@
                     <p class="lists-list__content">モデリングはドメインによって様々なものになり得る。しかしどういったもので型として確立することができるものを研究する。</p>
                 </li>
                 <li class="lists-list">
-                    <h4 class="lists-list__name">アーキテクチャ図</h4>
-                    <p class="lists-list__content">既存のアーキテクチャ図では書いた人、または専門知識が高くないとわからないものばかりである。よって、わかりやすいアーキテクチャ図を目指し、研究する。</p>
-                </li>
-                <li class="lists-list">
                     <h4 class="lists-list__name">エンジニアチームビルディング</h4>
                     <p class="lists-list__content">エンジニアチームをまとめるのは至難の業である。その中で効果的な手法を研究する。</p>
                 </li>
