@@ -19,10 +19,6 @@
             }
         },
         mounted: function() {
-            var SELECTORs = {
-                'model' : document.querySelectorAll('[data-model="Work"]')
-            }
-            $(SELECTORs.model).find('.com').css('height', $(window).height() + 'px');
         }
     }
 </script>

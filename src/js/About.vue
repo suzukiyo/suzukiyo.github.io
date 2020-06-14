@@ -21,10 +21,6 @@
             }
         },
         mounted: function() {
-            const selectors = {
-                'model' : document.querySelectorAll('[data-model="About"]')
-            }
-            $(selectors.model).find('.com').css('height', $(window).height() + 'px');
         }
     }
 </script>

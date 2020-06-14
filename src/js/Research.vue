@@ -42,10 +42,6 @@
             }
         },
         mounted: function() {
-            var SELECTORs = {
-                'model' : document.querySelectorAll('[data-model="Research"]')
-            }
-            $(SELECTORs.model).find('.com').css('height', $(window).height() + 'px');
         }
     }
 </script>

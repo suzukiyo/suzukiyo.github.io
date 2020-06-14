@@ -18,7 +18,8 @@
   "scripts": {
     "build:webpack": "webpack --config webpack/config.development.js --mode development",
     "clean": "rimraf build",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "run-dev": "npm webpack-dev-server"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }

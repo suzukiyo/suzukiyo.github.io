@@ -19,10 +19,7 @@
             }
         },
         mounted: function() {
-            const selectors = {
-                'model' : document.querySelectorAll('[data-model="Contact"]')
-            }
-            $(selectors.model).find('.com').css('height', '150px');
+
         }
     }
 </script>

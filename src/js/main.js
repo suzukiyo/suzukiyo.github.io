@@ -5,12 +5,13 @@ import Index from './Index.vue'
 
 Vue.config.productionTip = false
 
-// TODO: add router
+Vue.use(VueRouter)
 const router = new VueRouter({
     routes: routes
 })
 
 new Vue({
+    router: router,
     el: "#app",
     template: "<Index/>",
     components: { Index }
