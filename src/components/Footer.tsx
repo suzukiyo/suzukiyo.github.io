@@ -1,7 +1,6 @@
-import { FacebookIcon, XIcon, YouTubeIcon } from './SocialIcons'
+import { XIcon, YouTubeIcon } from './SocialIcons'
 
 const socials = [
-  { href: 'https://www.facebook.com/suzukiy0', label: 'Facebook', Icon: FacebookIcon },
   { href: 'https://twitter.com/suzukiy0', label: 'X (Twitter)', Icon: XIcon },
   {
     href: 'https://www.youtube.com/channel/UCYy_9fXWvRzOOvTs5V63KHA',
