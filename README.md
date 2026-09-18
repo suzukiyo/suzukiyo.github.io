@@ -1,17 +1,30 @@
-# url
+# suzukiyo.github.io
 
-http://suzukiyo.github.io/
+個人ポートフォリオサイト。
 
-# js framwork
+## Stack
 
-- Vue.js
+- React 19 + TypeScript
+- Vite
+- React Router
+- Tailwind CSS v4
 
-# tool
+## Development
 
-- webpack
-- babel
+```sh
+npm install
+npm run dev
+```
 
-# style
+## Build
 
-- sass
-- bootstrap
+```sh
+npm run build   # -> dist/
+npm run preview
+```
+
+## Deploy
+
+`master` に push すると GitHub Actions (`.github/workflows/deploy.yml`) が
+自動でビルドし、GitHub Pages に公開します。手動で dist/ をコミットする必要は
+ありません。

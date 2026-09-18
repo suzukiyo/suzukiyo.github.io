@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Helvetica Neue",
+    Arial, sans-serif;
+  --color-brand-50: #eefbfa;
+  --color-brand-100: #d4f4f1;
+  --color-brand-400: #4fb3ac;
+  --color-brand-500: #2f9a92;
+  --color-brand-600: #227b75;
+  --color-brand-900: #123634;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #0b1120;
+  color: #e5e7eb;
+}
