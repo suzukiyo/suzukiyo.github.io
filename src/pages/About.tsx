@@ -25,8 +25,17 @@ export default function About() {
         <h2 className="text-xl font-bold text-white">スキル</h2>
         <p className="mt-2">
           Java / PHP / Perl / Ruby / Go / Python / JavaScript ...。Linuxコマンド、SQLも
-          十分に扱えます。開発環境はIntelliJやVS Codeがメイン。最近はAWSやGCPを
-          暇なときに触ってみたり、最新技術への探求も日々行っています。
+          十分に扱えます。開発環境はIntelliJやVS Codeがメイン。最新技術への探求も
+          日々行っています。
+        </p>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-bold text-white">SREとしての活動</h2>
+        <p className="mt-2">
+          開発だけでなくSRE（Site Reliability Engineering）としても活動しています。
+          AWS / Kubernetes / Terraform を用いたインフラ構築・運用や、可観測性・
+          信頼性向上の取り組みにも携わっています。
         </p>
       </div>
 
