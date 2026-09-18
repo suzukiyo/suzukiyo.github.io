@@ -1,57 +1,28 @@
 {
   "name": "suzukiyo.github.io",
-  "homepage": "https://github.com/suzukiyo/",
-  "license": "MIT",
-  "version": "2.0.0",
-  "author": "suzukiyo",
   "private": true,
-  "main": "index.js",
-  "configs": {
-    "directories": {
-      "src": "src",
-      "dist": "dist"
-    }
-  },
-  "constant": {
-    "domain": "http://suzukiyo.github.io"
-  },
+  "version": "3.0.0",
+  "type": "module",
   "scripts": {
-    "build:webpack": "webpack --config webpack/config.development.js --mode development",
-    "clean": "rimraf build",
-    "watch": "webpack --watch",
-    "run-dev": "npm webpack-dev-server"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "ansi-regex": ">=6.0.1",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.2",
-    "clean-css": "^5.1.5",
-    "css-loader": "^6.3.0",
-    "dns-packet": ">=1.3.2",
-    "file-loader": "^6.2.0",
-    "lodash": ">=4.17.21",
-    "path-parse": ">=1.0.7",
-    "postcss": ">=7.0.36",
-    "postcss-loader": "^6.1.1",
-    "rimraf": "^3.0.2",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.2.1",
-    "vue": "^2.6.14",
-    "vue-class-component": "^7.2.6",
-    "vue-html-loader": "^1.2.4",
-    "vue-loader": "^15.9.8",
-    "vue-property-decorator": "^9.1.2",
-    "vue-router": "^3.5.2",
-    "vue-style-loader": "^4.1.3",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^5.53.0",
-    "y18n": ">=4.0.1"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "sass": "^1.89.1",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.2.1",
-    "webpack-merge": "^6.0.1"
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
   }
 }
