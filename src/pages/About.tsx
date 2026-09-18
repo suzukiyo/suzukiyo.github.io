@@ -40,6 +40,15 @@ export default function About() {
       </div>
 
       <div>
+        <h2 className="text-xl font-bold text-white">AI活用</h2>
+        <p className="mt-2">
+          Claude Code をはじめとしたAIコーディングエージェントを積極的に活用し、
+          開発・運用の生産性向上に取り組んでいます。実際にこのサイトもClaude Codeとの
+          対話を通じて構築しています。
+        </p>
+      </div>
+
+      <div>
         <h2 className="text-xl font-bold text-white">経験業務</h2>
         <p className="mt-2">
           銀行 / クレジットカード / FX / アパレル / ウェディング / 広告 / レジャーなど。
